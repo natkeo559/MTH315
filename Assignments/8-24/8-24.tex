@@ -1,0 +1,86 @@
+\documentclass[a4paper]{article}
+\usepackage[shortlabels]{enumitem}
+\usepackage{amsmath,amssymb,amsthm,amsfonts}
+\newcommand{\bb}{\textbf}
+
+\begin{document}
+
+    \begin{center}
+        \Large \textbf{8/24} \\
+        \large \textit{Nathan Keough} \\
+        Acknowledgements: \emph{None} \vspace{.5pc} \\ \line(1,0){300} 
+        \vspace{1pc}
+    \end{center} 
+    
+    \begin{flushleft}
+        \begin{enumerate}
+            \item [1.2.1]
+            Suppose that $a, b, c \in \mathbb{R}$ and $a\leq b$.
+
+            \begin{enumerate}
+                \item [(a)]
+                Prove that $a + c\leq b + c$. 
+                \begin{proof} 
+                    Let $a,b,c \in \mathbb{R}$ and $a\leq b$.
+                    By the TP, $a < b$ or $a = b$.
+
+                    \bb{Case 1} [Assume $a < b$] \\
+                    By the AP, adding $c$ to both sides results in 
+                        \begin{align}
+                            &    a + c < b + c
+                        \end{align}
+                    \bb{Case 2} [Assume $a = b$] \\
+                    By the AP, adding $c$ to both sides results in 
+                        \begin{align}
+                            &    a + c = b + c
+                        \end{align}
+                    
+                    In either case, $a + c < b + c$ or $a + c = b + c$ \\
+                    $\therefore a + c\leq b + c$.
+                \end{proof}
+
+                \item [(b)]
+                If $c\geq 0$, prove that $a \cdot c\leq b \cdot  c$.
+                \begin{proof}
+                    Let $a,b,c \in \mathbb{R}$ and $a\leq b$.
+                    By the TP, $a < b$ or $a = b$. 
+
+                    \bb{Case 1} [Assume $a < b$] 
+                        \begin{tabbing}
+                            Now,\= by TP, $c > 0$ or $c = 0$. \\ \\
+                            \> \bb{Case i. }\= [Assume $c > 0$] \+ \\
+                            \> By MP1, multiplying both sides by $c > 0$ gives us \\
+                            \> $a \cdot c < b \cdot c$ \- \\
+
+                            \> \bb{Case ii.}\= [Assume $c = 0$] \+ \\
+                            \> By MP, multiplying both sides by $c = 0$ gives us \\
+                            \> $a \cdot c < b \cdot c$ \\
+                            \> $a \cdot 0 < b \cdot 0$ \\
+                            \> $= (0 = 0)$ \\
+                        \end{tabbing}
+
+                    \bb{Case 2} [Assume a = b] \\
+                        \begin{tabbing}
+                            Now,\= by TP, $c > 0$ or $c = 0$. \\ \\
+                            \> \bb{Case i. }\= [Assume $c > 0$] \+ \\
+                            \> By MP, multiplying both sides by $c > 0$ gives us \\
+                            \> $a \cdot c = b \cdot c$ \- \\
+
+                            \> \bb{Case ii.}\= [Assume $c = 0$] \+ \\
+                            \> By MP, multiplying both sides by $c = 0$ gives us \\
+                            \> $a \cdot c = b \cdot c$ \\
+                            \> $a \cdot 0 = b \cdot 0$ \\
+                            \> $= (0 = 0)$ \\
+                        \end{tabbing}
+
+                In both cases $a < b$ and $a = b$ with $c = 0$, we get $a \cdot c = b \cdot c$.\\
+                In both cases $a < b$ and $a = b$ with $c > 0$, we get $a \cdot c < b \cdot c$.\\
+                $\therefore a \cdot c\leq b \cdot  c$
+
+
+                \end{proof}
+            \end{enumerate}             
+        \end{enumerate}
+    \end{flushleft}
+
+\end{document}
