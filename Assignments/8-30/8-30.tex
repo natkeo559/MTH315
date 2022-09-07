@@ -18,7 +18,24 @@
             \item
             Prove that if $a\leq b$ and $c\leq d$ then $a+c\leq b+d$..
 
+            % if a <= b and c<=d --> a+c <= b+d
+            % a + c <= b + c --> a + d <= b + d --> a + c <= b + d
+            % a + d <= b + d
+            % since c <= d and 
+
+            % a + c <= b + c <= a + d <= b + d
+
+
+
+
             \begin{proof}
+                Assume $a\leq b$ and $c\leq d$. \\
+                Then 
+                \begin{align*}
+                    \text{Adding c to both sides of $a \leq b$ gives: }& a + c \leq b + c. & (AP) \\
+                    \text{Adding b to both sides of $c \leq d$ gives: }& b + c \leq b + d. & (AP) \\
+                \end{align*}
+                Since $a + c \leq b + c$ and $b + c \leq b + d$, then we can conclude $a + c \leq b + d$ by the transitive property.
                 
             \end{proof}             
         \end{enumerate}
