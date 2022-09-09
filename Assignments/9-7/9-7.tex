@@ -1,0 +1,81 @@
+\documentclass[a4paper]{article}
+\usepackage[shortlabels]{enumitem}
+\usepackage{amsmath,amssymb,amsthm,amsfonts}
+\newcommand{\bb}{\textbf}
+\newcommand{\real}{\mathbb{R}}
+
+\begin{document}
+
+    \begin{center}
+        \Large \textbf{PS 9/7} \\
+        \large \textit{Nathan Keough} \\
+        Acknowledgements: \emph{Utilized the study session: Worked independently and checked work cooperatively with other classmates on this practice set.} \vspace{.5pc} \\ 
+        \line(1,0){300} 
+        \vspace{1pc}
+    \end{center} 
+    
+    \begin{flushleft}
+        \begin{enumerate}
+            \item
+            Find all $n\in \mathbb{N}$ so that $\frac{1-n}{1-n^2}<0.1$.
+                \begin{align*}
+                    \frac{1-n}{1-n^2} < 0.1 & \\
+                    &= 1-n > \frac{ 1-n^2}{10} & (\text{MP ii.})\\
+                    &= 10 - 10n > 1-n^2 & (\text{MP i.}) \\
+                    &= n^2 - 10n + 9 > 0 & (\text{AP}) \\
+                    &= (n-1)(n-9) > 0 & (\text{Factoring}) \\
+                    &= n > 9, n > 1 & \text{Inequality and}\\
+                    && \text{Natuarality not satisfied until n $>$ 9} \\
+                    &= \text{So } n>9
+                    & \{n\in \mathbb{N} \vert n>9\} \\
+                \end{align*}
+
+            \item
+            Prove if $-1\leq x \leq 2$, then $|x^2+x-2|\leq 4|x-1|$.
+            \begin{proof}
+                Assume $-1\leq x \leq 2$.
+                Then, 
+                \begin{align*}
+                    -1\leq x \leq 2 & & (Given) \\
+                    \implies& -1 + 2 \leq x + 2\leq 2 + 2 & (\text{AP}) \\
+                    =& 1 \leq x + 2\leq 4 & \\
+                    \implies& -4 \leq x + 2\leq 4 & (\text{Since -4 $<$ 1}) \\
+                    \implies& |x+2| \leq 4 & (\text{FTAV}) \\
+                    \implies& |x+2||x-1| \leq 4|x-1| & (\text{MP i.})\\
+                    = &|x^2-x-2| \leq 4|x-1| & (\text{REM 1.5}) \\
+                    \text{So } -1\leq x \leq 2 &\implies |x^2+x-2|\leq 4|x-1| \text{ as desired.} \\
+                \end{align*}
+                $\therefore$ if $-1\leq x \leq 2$, then $|x^2+x-2|\leq 4|x-1|$.
+            \end{proof}
+
+            \item
+            Prove $0\leq a < b$ implies $a^2<b^2$ and $\sqrt{a}<\sqrt{b}$.
+            \begin{proof}
+                Assume $0\leq a < b$. \\
+                (Showing $0\leq a < b \implies a^2 < b^2$):\\
+                By contradiction:  Assume $0\leq a < b$ \underline{and} $a^2\geq b^2$.
+                \begin{align*}
+                    \text{Then, } a^2 &\geq b^2  \\
+                    \implies \sqrt{a^2} &\geq \sqrt{b^2} \\
+                    = a &\geq b 
+                \end{align*}
+                $a \geq b \text{ contradicts our assumption.}$ \\
+                $\therefore 0\leq a < b \implies a^2 < b^2$ \\
+                (Showing $0\leq a < b \implies \sqrt{a} < \sqrt{b}$): \\
+                By contradiction:  Assume $0\leq a < b$ \underline{and} $\sqrt{a} \geq \sqrt{b}$.
+                \begin{align*}
+                    \text{Then, } \sqrt{a} &\geq \sqrt{b}  \\
+                    \implies \sqrt{a}^2 &\geq \sqrt{b}^2 \\
+                    = a &\geq b 
+                \end{align*}
+                $a \geq b \text{ contradicts our assumption.}$ \\
+                $\therefore 0\leq a < b \implies \sqrt{a} < \sqrt{b}$ \\
+                
+                Notice, $0\leq a < b \implies a^2 < b^2$ \\
+                and $0\leq a < b \implies \sqrt{a} < \sqrt{b}$. \\
+                $\therefore 0\leq a < b$ implies $a^2<b^2$ and $\sqrt{a}<\sqrt{b}$
+            \end{proof}
+        \end{enumerate}
+    \end{flushleft}
+
+\end{document}
