@@ -1,0 +1,92 @@
+\documentclass[a4paper]{article}
+\usepackage[shortlabels]{enumitem}
+\usepackage{amsmath,amssymb,amsthm,amsfonts}
+\newcommand{\bb}{\textbf}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\nat}{\mathbb{N}}
+
+\begin{document}
+
+    \begin{center}
+        \Large \textbf{10/5} \\
+        \large \textit{Nathan Keough} \\
+        Acknowledgements: \emph{Utilized the study session: Worked independently and checked work cooperatively with other classmates on this practice set.} \vspace{.5pc} \\ \line(1,0){300} 
+        \vspace{1pc}
+    \end{center} 
+    
+    \begin{flushleft}
+
+        % % % % % % % % % % % % % % % % % %
+
+        \textbf{Wade 2.1.1a} \\
+        $2 - \frac{1}{n}\rightarrow 2\ as \ n \to \infty$ 
+        \begin{proof}\mbox{}\\*
+            Let $\epsilon > 0$. By the AP, $\exists N \in \nat \ni$ \\
+            $N > \frac{1}{\epsilon}$. Then $n \geq N \implies n > \frac{1}{\epsilon} \implies \frac{1}{n} < \epsilon$.\\
+            So $n \geq N \implies |2 - \frac{1}{n} -2| = \frac{1}{n} < \epsilon$. \\
+            $\therefore 2 - \frac{1}{n} \to 2 \ as \ n \to \infty$. 
+            
+        \end{proof}
+
+        % % % % % % % % % % % % % % % % % %
+
+        \textbf{Wade 2.1.1c} \\
+        $3 \left(1 + \frac{1}{n}\right) \rightarrow3\ as\ n \to \infty$
+        \begin{proof}\mbox{}\\*
+            Let $\epsilon > 0$. By the AP, $\exists N \in \nat \ni$ \\
+            $N > \frac{3}{\epsilon}$. Then $n \geq N \implies n \geq \frac{3}{\epsilon} \implies \frac{3}{n} < \epsilon$.\\
+            So $n \geq N \implies |3\left(1+\frac{1}{n}\right) -3| = \frac{3}{n} < \epsilon$. \\
+            $\therefore 3 \left(1 + \frac{1}{n}\right) \to 3$. 
+
+            
+        \end{proof}
+
+        % % % % % % % % % % % % % % % % % %
+
+        \textbf{Wade 2.1.2a} \\
+        $1 + 2x_n \rightarrow 3\ as\ n \rightarrow \infty$     
+        \begin{proof}\mbox{}\\*
+            Let $\epsilon > 0$. Then since $X_n \to 1$, $\exists N \in \nat \ni$ \\
+            $n \geq N \implies |X_n -1| < \frac{\epsilon}{2}$ \\
+            Then $n \geq N \implies$
+            \begin{align*}
+                & 2|X_n -1| \\
+                &= |2||X_n -1| \\
+                &= |2(X_n -1)| \\
+                &= |2X_n -2| \\
+                &= |1 + 2X_n - 3| < \epsilon.
+            \end{align*}
+            $\therefore 1 + 2X_n \to 3$
+
+        \end{proof}
+
+        % % % % % % % % % % % % % % % % % %
+
+        \textbf{Wade 2.1.2b} \\
+        $\frac{\pi x_n - 2}{x_n} \rightarrow \pi -2\ as\ n \rightarrow \infty$            
+        \begin{proof}\mbox{}\\*
+            Let $\epsilon > 0$. Then since $X_n \to 1$, $\exists N_1 \in \nat \ni$ \\
+            $n \geq N_1 \implies |X_n -1| < \frac{\epsilon}{2X_n}$ \\
+            Let $\epsilon = 0.5$ so $\exists N_2 \in \nat \ni n \geq N_2 \implies |X_n -1| < 0.5$ \\
+            So then, $n \geq N_2 \implies X_n > 0.5$. \\
+            Now let $N = MAX\{N_1, N_2 \}$. \\
+            Hence, $n \geq N \implies$
+            \begin{align*}
+                n \geq N_1 \\
+                & \implies |X_n -1| < \frac{\epsilon}{2X_n} \\
+                & \implies n \geq N_2 \\
+                & \implies 0<\frac{1}{2X_n} < \frac{1}{2} \\
+                Then \\
+                & \left| \frac{\pi X_n -2}{\pi} - \pi - 2\right| \\
+                & = \frac{|2X_n -1|}{X_n} < \epsilon\\
+                & \implies |X_n -1| < \frac{\epsilon}{2X_n} \forall n \geq N.
+            \end{align*}
+            $\therefore \frac{\pi x_n - 2}{x_n} \to \pi -2$
+            
+        \end{proof}
+
+        % % % % % % % % % % % % % % % % % %
+
+    \end{flushleft}
+
+\end{document}
