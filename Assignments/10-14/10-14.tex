@@ -1,0 +1,101 @@
+\documentclass[a4paper]{article}
+\usepackage[shortlabels]{enumitem}
+\usepackage{amsmath,amssymb,amsthm,amsfonts}
+\newcommand{\bb}{\textbf}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\nat}{\mathbb{N}}
+
+\begin{document}
+
+    \begin{center}
+        \Large \textbf{10/14} \\
+        \large \textit{Nathan Keough} \\
+        Acknowledgements: \emph{Utilized the study session: Worked independently and checked work cooperatively with other classmates on this practice set. Recieved helpful advice on part iv from a classmate which included chalk board work.} \vspace{.5pc} \\ \line(1,0){300} 
+        \vspace{1pc}
+    \end{center} 
+    
+    \begin{flushleft}
+
+        % % % % % % % % % % % % % % % % % %
+
+        \textbf{Theorem 2.12 part iii} \\
+        $\lim_{n \to \infty} \left( x_n y_n \right) = \lim_{n \to \infty}\left( x_n\right) \lim_{n \to \infty} \left( y_n\right)$ \\
+
+        \begin{proof}\mbox{}\\*
+            Suppose $x_n \to x$ and $y_n \to y$ as $n \to \infty$. \\
+            let $\epsilon > 0$. Recall that $\lim_{n \to \infty}\left( x_n\right) \implies |x_n -x|<\epsilon$ and \\
+            $\lim_{n \to \infty} \left( y_n\right) \implies |y_n -y| < \epsilon$. \\
+            Choose $N \in \nat \ni n \leq N \implies |x_n -x| < \sqrt{\epsilon} < \epsilon$ and  $|y_n -y| < \sqrt{\epsilon} < \epsilon$. \\
+            Thus $n \geq N \implies |(x_n y_n)-(x y)| \leq |x_n -x| |y_n -y| < \sqrt{\epsilon} \sqrt{\epsilon}  = \epsilon$. 
+            $\therefore \lim_{n \to \infty} \left( x_n y_n \right) = \lim_{n \to \infty}\left( x_n\right) \lim_{n \to \infty} \left( y_n\right)$
+
+        \end{proof}
+
+        % % % % % % % % % % % % % % % % % %
+
+        \textbf{Theorem 2.12 part iv} \\
+        Where $y_n \neq 0$ and $\lim_{n \to \infty} y_n \neq 0$. \\
+        $\lim_{n \to \infty} \left( \frac{x_n}{y_n} \right) = \frac{\lim_{n \to \infty}\left( x_n\right)}{\lim_{n \to \infty} \left( y_n\right)} $ \\
+        \begin{proof}\mbox{}\\*
+            Let $\epsilon > 0$. \\
+            Since $y_n$ is a converging sequence, $|y_n|$ must be bounded. \\
+            Say $c \leq |y_n| \leq d$. Then $\frac{1}{|y_n|} \leq \frac{1}{c}$ where $c > 0$. \\
+            Since, $y_n \to y, \exists N \in \nat \ni n \geq N \implies |y_n - y_0| < c|y_0|\epsilon$. \\
+            So, $n \geq N \implies$ \\
+            $\left| \frac{1}{y_n} - \frac{1}{y_0}\right| = \left| \frac{y_0 - y_n}{y_n y_0} \right| = \left|(y_0 - y_n) \frac{1}{y_n} \frac{1}{y_0}\right|$
+            $= |y_0 - y_n| \frac{1}{|y_n|}\frac{1}{|y_0|} < c|y_0|\epsilon \frac{1}{c} \frac{1}{|y_0|} = \epsilon$. \\
+            $\therefore \frac{1}{y_n} \to \frac{1}{y_0}$. \\
+
+            Notice $\frac{x_n}{y_n} = x_n \frac{1}{y_n} \implies x_0 \frac{1}{y_0} = \frac{x_0}{y_0}$.  [By Product Law]\\
+            $\therefore \frac{x_n}{y_n} \to \frac{x_0}{y_0}$
+            Thus it is shown that $\lim_{n \to \infty} \left( \frac{x_n}{y_n} \right) = \frac{\lim_{n \to \infty}\left( x_n\right)}{\lim_{n \to \infty} \left( y_n\right)}$
+        \end{proof}
+
+        % % % % % % % % % % % % % % % % % %
+
+        \textbf{Wade 2.2.3ab using Theorem 2.12} \\
+        Find the limit (if it exists) of each of the following sequences. \\
+
+        A. $x_n = (2 + 3n-4n^2)/(1-2n + 3n^2)$
+
+        \begin{proof}\mbox{}\\*
+            Let $x_n = (2 + 3n-4n^2)/ (1-2n + 3n^2)$ Then by 2.12, we can use limit laws to find the limit (if one exists). \\
+            $\lim_{n \to \infty} x_n$ \\
+            \begin{align*}
+                &= \lim_{n \to \infty} (2 + 3n-4n^2)/ \lim_{n \to \infty}(1-2n + 3n^2) &\text{[2.12.iv]}\\
+                &= \lim_{n \to \infty} (2) + \lim_{n \to \infty} (3n) + \lim_{n \to \infty} (-4n^2) / \\
+                &      \lim_{n \to \infty}(1) + \lim_{n \to \infty} (-2n) + \lim_{n \to \infty}(3n^2)   &\text{[2.12.i]} \\
+                &= \lim_{n \to \infty} (2) + (3)\lim_{n \to \infty} (n) + (-4)\lim_{n \to \infty} (n^2) / \\
+                &      \lim_{n \to \infty}(1) + (-2)\lim_{n \to \infty} (n) + (3)\lim_{n \to \infty}(n^2)   &\text{[2.12.ii]} \\
+                &= \lim_{n \to \infty} (2) + (3)\lim_{n \to \infty} (n) + (-4)\lim_{n \to \infty} (n)\lim_{n \to \infty} (n) / \\
+                &      \lim_{n \to \infty}(1) + (-2)\lim_{n \to \infty} (n) + (3)\lim_{n \to \infty} (n)\lim_{n \to \infty} (n)   &\text{[2.12.iii]} \\
+                &= -\frac{4}{3} &\text{[Product Law + Algebra]}
+            \end{align*}
+            $\therefore \lim_{n \to \infty} x_n = -\frac{4}{3}$
+        \end{proof}
+
+        B. $x_n = (n^3 + n-2)/(2n^3 + n-2)$
+
+        \begin{proof}\mbox{}\\*
+            Let $x_n = (n^3 + n-2)/(2n^3 + n-2)$ Then by 2.12, we can use limit laws to find the limit (if one exists). \\
+            $\lim_{n \to \infty} x_n$ \\
+            \begin{align*}
+                &= \lim_{n \to \infty} (n^3 + n-2)/ \lim_{n \to \infty}(2n^3 + n-2) &\text{[2.12.iv]}\\
+                &= \lim_{n \to \infty} (n^3)+ \lim_{n \to \infty}(n) + \lim_{n \to \infty}(-2) / \\
+                &      \lim_{n \to \infty}(2n^3) + \lim_{n \to \infty}(n) + \lim_{n \to \infty}(-2)   &\text{[2.12.i]} \\
+                &= \lim_{n \to \infty} (n^3)+ \lim_{n \to \infty}(n) + \lim_{n \to \infty}(-2) / \\
+                &      (2)\lim_{n \to \infty}(n^3) + \lim_{n \to \infty}(n) + \lim_{n \to \infty}(-2)   &\text{[2.12.ii]} \\
+                &= \lim_{n \to \infty} (n)\lim_{n \to \infty} (n)\lim_{n \to \infty} (n)+ \\
+                &      \lim_{n \to \infty}(n) + \lim_{n \to \infty}(-2) / \\
+                &           (2)\lim_{n \to \infty}(n)\lim_{n \to \infty} (n)\lim_{n \to \infty} (n) +\\
+                &                \lim_{n \to \infty}(n) + \lim_{n \to \infty}(-2)   &\text{[2.12.iii]} \\
+                &= \frac{1}{2} &\text{[Product Law + Algebra]}
+            \end{align*}
+            $\therefore \lim_{n \to \infty} x_n = \frac{1}{2}$
+        \end{proof}
+
+        % % % % % % % % % % % % % % % % % %
+
+    \end{flushleft}
+
+\end{document}
