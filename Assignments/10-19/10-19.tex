@@ -1,0 +1,51 @@
+\documentclass[a4paper]{article}
+\usepackage[shortlabels]{enumitem}
+\usepackage{amsmath,amssymb,amsthm,amsfonts,tikz}
+\newcommand{\bb}{\textbf}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\cir}[1]{\tikz[baseline]{%
+    \node[anchor=base, draw, circle, inner sep=0, minimum width=1.2em]{#1};}}
+
+\begin{document}
+
+    \begin{center}
+        \Large \textbf{10/19} \\
+        \large \textit{Nathan Keough} \\
+        Acknowledgements: \emph{Utilized the study session: Worked independently and checked work cooperatively with other classmates on this practice set.} \vspace{.5pc} \\ \line(1,0){300} 
+        \vspace{1pc}
+    \end{center} 
+    
+    \begin{flushleft}
+
+        % % % % % % % % % % % % % % % % % %
+
+        \textbf{Wade Exercise 2.3.6} \\
+        This result is used in Section 6.3 and elsewhere.  \\
+        \begin{enumerate}[a.]
+            \item Suppose that \{$x_n$\} is a monotone increasing sequence in $\real$ (not necessarily bounded above). Prove that there is an extended real number $x$ such that $x_n \to x$ as $n \to \infty$. 
+            \item State and prove an analogous result for decreasing sequences. 
+        \end{enumerate} 
+
+
+        \begin{proof}\mbox{}\\*
+
+            \begin{tabbing}
+                a.  \= Let {$x_n$} be be a monotone increasing sequence. \\
+                          \> If {$x_n$} is bounded above, then $\exists x \in \real \ni x_n \to x$ [MCT]. \\
+                          \> If {$x_n$} is not bounded, then given any upper bound $M > 0$, $\exists N \in \nat \ni x_N > M$. \\
+                          \> So, {$x_n$} is increasing and $n \geq N \implies x_n \geq x_N > M$. \\
+                          \> Thus if {$x_n$} is increasing and not bounded above, then {$x_n$} diverges to $\infty$ as $n \to \infty$. \\
+                          \mbox{}\\*
+                b. \= Likewise, $-${$x_n$} is a decreasing sequence. \\
+                   \> If $-${$x_n$} is bounded below, then $\exists x \in \real \ni -x_n \to -x$ [MCT]. \\
+                   \> If $-${$x_n$} is not bounded, then given any lower bound $M < 0$, $\exists N \in \nat \ni x_N < M$. \\
+                   \> So, $-${$x_n$} is decreasing and $n \leq N \implies x_n \leq x_N < M$. \\
+                   \> Thus if $-${$x_n$} is decreasing and not bounded below, then $-${$x_n$} diverges to $-\infty$ as $n \to \infty$.
+            \end{tabbing}
+            
+        \end{proof}
+
+    \end{flushleft}
+
+\end{document}
