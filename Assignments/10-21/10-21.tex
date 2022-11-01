@@ -1,0 +1,60 @@
+\documentclass[a4paper]{article}
+\usepackage[shortlabels]{enumitem}
+\usepackage{amsmath,amssymb,amsthm,amsfonts,tikz}
+\newcommand{\bb}{\textbf}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\cir}[1]{\tikz[baseline]{%
+    \node[anchor=base, draw, circle, inner sep=0, minimum width=1.2em]{#1};}}
+
+\begin{document}
+
+    \begin{center}
+        \Large \textbf{10/21} \\
+        \large \textit{Nathan Keough} \\
+        Acknowledgements: \emph{} \vspace{.5pc} \\ \line(1,0){300} 
+        \vspace{1pc}
+    \end{center} 
+    
+    \begin{flushleft}
+
+        % % % % % % % % % % % % % % % % % %
+
+        
+
+        \begin{enumerate}[1.]
+            \item Prove if $y_n\to L$ and $x_n=my_n+b$, then $x_n\to mL+b$.
+            
+            \begin{proof}\mbox{}\\*
+            Let $y_n\to L$ and $x_n=my_n+b$. \\
+            Then $\exists N \in \nat \ni n \geq N \implies |y_n - L| < \frac{\epsilon}{|m|} < \epsilon$ \\
+            So $n \geq N \implies |x_n - (mL + b)|$ 
+            \begin{align*}
+                &= |(my_n + b)-(mL + b)| & \\
+                &= |my_n + b-mL - b| & \\
+                &= |my_n-mL| & \\
+                &= |m(y_n-L)| & \\
+                &= |m||y_n - L| & \\
+                &< |m|\frac{\epsilon}{m} = \epsilon.
+            \end{align*}
+            $\therefore$ if $y_n\to L$ and $x_n=my_n+b$, then $x_n\to mL+b$
+            \end{proof}
+
+
+            \item Prove if $x_n=1-1/n$, then $x_n$ converges to $1$ using definitions and the Archimedian Principle.
+            \begin{proof}\mbox{}\\*
+            Let $\epsilon > 0$. By the AP, select $N \in \nat \ni N > \frac{1}{\epsilon}$. \\
+            $n \geq N \implies |x_n - 1|$
+            \begin{align*}
+                &= |1 - \frac{1}{n} - 1| & \\
+                &= |- \frac{1}{n}| = | \frac{1}{n}| & \\
+                &\leq | \frac{1}{N}| & \\
+                &< \epsilon & \forall n\geq N.
+            \end{align*}
+            Thus if $x_n=1-1/n$, then $x_n$ converges to $1$.
+            \end{proof}
+        \end{enumerate} 
+
+    \end{flushleft}
+
+\end{document}
