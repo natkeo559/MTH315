@@ -1,0 +1,84 @@
+\documentclass[a4paper]{article}
+\usepackage[shortlabels]{enumitem}
+\usepackage{amsmath,amssymb,amsthm,amsfonts,tikz}
+\newcommand{\bb}{\textbf}
+\newcommand{\eps}{\epsilon}
+\newcommand{\del}{\delta}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\cir}[1]{\tikz[baseline]{%
+    \node[anchor=base, draw, circle, inner sep=0, minimum width=1.2em]{#1};}}
+
+\begin{document}
+
+    \begin{center}
+        \Large \textbf{11/4} \\
+        \large \textit{Nathan Keough} \\
+        Acknowledgements: \emph{} \vspace{.5pc} \\ \line(1,0){300} 
+        \vspace{1pc}
+    \end{center} 
+    
+    \begin{flushleft}
+
+        % % % % % % % % % % % % % % % % % %
+
+        \bb{Wade Exercise 3.1.1}
+        Using Definition 3.1, prove that each of the following limits exists. \\
+        \begin{enumerate}[c.]
+            \item $\lim\limits_{x \to 1} x^3 + 2x + 1 = 4$.
+            
+            \begin{proof}\mbox{}\\*
+                Let $f(x) = x^3 + 2x + 1$ and Let $\eps > 0$. \\ 
+                Set $\del = \min\left\{1, \frac{\eps}{9}\right\}$. \\
+                Assume $0 < \left| x - 1 \right| < \del $. \\
+                Then, 
+                \begin{align*}
+                    |x-1| < 1 &\implies -1 < x-1 < 1 & [\text{FTAV}]\\
+                    &\implies 0 < x < 2 &\\
+                    &\implies x \in (0,2) &\\
+                    &\text{  Also note that } |x-1|<\frac{\eps}{9}
+                \end{align*}
+                Then, 
+                \begin{align*}
+                    |f - 4| &= |x^3 +2x +1 - 4| & [\text{Substitution/Algebra}]\\
+                            &= |x^3 +2x -3| \\
+                            &= |x-1||x^2 + x + 3| \\
+                            &< |x-1| (|x|^2 + |x| + 3) \\
+                            &= \frac{\eps}{9} ({(2)}^2 + (2) + 3) \\
+                            &= \frac{\eps}{9} 9 \\
+                            &< \eps.
+                \end{align*}
+                $\therefore f \to 4$ as $x \to 1$.
+            \end{proof}
+
+            \item [d.] $\lim\limits_{x \to 0} x^3 \sin{(e^{x^2})} = 0$
+            
+            \begin{proof}\mbox{}\\*
+                Let $f(x) = x^3 \sin{(e^{x^2})}$ and Let $\eps > 0$. \\ 
+                Set $\del = \min\left\{1, \frac{\eps}{\sin{(e)}}\right\}$. \\
+                Assume $0 < \left| x - 0 \right| < \del $. \\
+                Notice $\left| x \right| < 1$. \\
+                Then, 
+                \begin{align*}
+                    |x| < 1 &\implies -1 < x < 1 & [\text{FTAV}]\\
+                    &\implies x \in (-1,1) &\\
+                    &\text{  Also note that } |x-1|<\frac{\eps}{\sin{(e)}}
+                \end{align*}
+                Then, 
+                \begin{align*}
+                    |f - 0| &= |x^3 \sin{(e^{x^2})} - 0| & [\text{Substitution/Algebra}]\\
+                            &= |x^3 \sin{(e^{x^2})}| \\
+                            &= |x||x^2 \sin{(e^{x^2})}| \\
+                            &< |x|(|x|^2 \sin{(e^{|x|^2})}) \\
+                            &= \frac{\eps}{\sin{(e)}} ({(1)}^2 \sin{(e^{{(1)}^2})}) \\
+                            &= \frac{\eps}{\sin{(e)}} \sin{(e)} \\
+                            &< \eps.
+                \end{align*}
+                $\therefore f \to 0$ as $x \to 0$.
+            \end{proof}
+
+        \end{enumerate} 
+
+    \end{flushleft}
+
+\end{document}
