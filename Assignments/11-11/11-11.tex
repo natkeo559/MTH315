@@ -1,0 +1,56 @@
+\documentclass[a4paper]{article}
+\usepackage[shortlabels]{enumitem}
+\usepackage{amsmath,amssymb,amsthm,amsfonts,tikz}
+\newcommand{\bb}{\textbf}
+\newcommand{\eps}{\epsilon}
+\newcommand{\del}{\delta}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\cir}[1]{\tikz[baseline]{%
+    \node[anchor=base, draw, circle, inner sep=0, minimum width=1.2em]{#1};}}
+
+\begin{document}
+
+    \begin{center}
+        \Large \textbf{11/11} \\
+        \large \textit{Nathan Keough} \\
+        Acknowledgements: \emph{Utilized the study session: Worked independently and checked work cooperatively with other classmates on this practice set.} \vspace{.5pc} \\ \line(1,0){300} 
+        \vspace{1pc}
+    \end{center} 
+    
+    \begin{flushleft}
+
+        % % % % % % % % % % % % % % % % % %
+
+        \begin{enumerate}
+            \item [1.] Prove if $a<x<b$, then there exists $M$ so that $|x|<M$.
+            
+            \begin{proof}\mbox{}\\*
+                Let $a,x,b\in \real$.\\
+                $a<x<b \implies x\in (a,b)$, \\
+                So, set $M = \max\{|a|, |b|\} \in \real$. \\
+                $M = \max\{|a|, |b|\} \implies -M < x < M = |x| < M$. \\
+                $\therefore$ if $a<x<b$, then there exists $M$ so that $|x|<M$.
+            \end{proof}
+
+            \item [2.] Prove $f(x)=|x|$ is continuous on $\real$.
+            
+            \begin{proof}\mbox{}\\*
+                Let $f(x) = |x|$ and $a \in \real$. Let $\eps > 0$. \\
+                Set $\del = \eps$. \\
+                Assume $|x-a| < \del$. Notice $|x-a| < \eps$.
+                \begin{align*}
+                    \text{Then, }|f(x) - f(a)| &< ||x|-|a|| & \\
+                                               &\leq |x-a| &\\ 
+                                               &< \eps &
+                \end{align*}
+                Thus, $|x-a| < \del \implies |f(x) - f(a)| < \eps$. \\
+                $a \in \real$ is arbitrary, $f(x)$ is continuous at $x=a$, \\
+                $\therefore f(x)=|x|$ is continuous on $\real$.
+            \end{proof}
+
+        \end{enumerate} 
+
+    \end{flushleft}
+
+\end{document}
