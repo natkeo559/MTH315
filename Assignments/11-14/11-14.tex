@@ -1,0 +1,52 @@
+\documentclass[a4paper]{article}
+\usepackage[shortlabels]{enumitem}
+\usepackage{amsmath,amssymb,amsthm,amsfonts,tikz}
+\newcommand{\bb}{\textbf}
+\newcommand{\eps}{\epsilon}
+\newcommand{\del}{\delta}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\cir}[1]{\tikz[baseline]{%
+    \node[anchor=base, draw, circle, inner sep=0, minimum width=1.2em]{#1};}}
+
+\begin{document}
+
+    \begin{center}
+        \Large \textbf{11/14} \\
+        \large \textit{Nathan Keough} \\
+        Acknowledgements: \emph{} \vspace{.5pc} \\ \line(1,0){300} 
+        \vspace{1pc}
+    \end{center} 
+    
+    \begin{flushleft}
+
+        % % % % % % % % % % % % % % % % % %
+
+        \begin{enumerate}[a.]
+            \item [3.3.2] \bb{For each of the following, prove that there is at least one $x\in \real$ which  satisfies the given equation.}\\
+            a. $e^x = x^3$ \\  
+            \begin{proof}\mbox{}\\* 
+                Let $f(x) = e^x$ and $g(x) = x^3$. Notice that $f$ and $g$ are both continuous on $\real$. Now let $h(x) = f(x) - g(x)$. \\
+                $h$ must be continuous on $\real$ since $f,g$ are both continuous on $\real$.\\
+                Now, consider $h(x) > 0$ $\implies f(x)$ lies on top of $g(x)$ and $f(x) < 0$ $\implies g(x)$ lies on top of $f(x)$, when graphed.\\
+                If $h(x) = 0$, then $e^x = x^3$ is satisfied.\\
+                It suffices to find an $x \in \real \ni h(x) > 0$ and an $x \ni h(x) < 0$.\\
+                So let $x = 1$, $h(1) \approx 1.72$ and let $x = 2$, $h(2) \approx -0.61$. \\
+                Since, $h$ is continuous on $\real$, $h$ is closed on $[1,2]$, and $h(1) \leq 0 \leq h(2)$, $\exists$ at at least one $x\in \real \ni f(x) = 0$ by the Intermediate Value Therem. \\
+            \end{proof}
+
+            \item [3.3.4] \bb{If $f : [a, b] \to [a, b]$ is continuous, then $f$ has a fixed point; that is, there is a $c \in [a, b]$ such that $f(c) = c$.} \\
+            
+            \begin{proof}\mbox{}\\*
+                Let $f: [a,b] \to [a,b]$. \\
+                If $f(a)=a$ or $f(b)=b$, then we have shown $f(c)=c$, otherwise, we may assume that $a<f(a) < f(b) < b$. \\
+                Consider $g(c) = f(c) - c$. Then $g(a) = f(a)-a > 0$ and $g(b) = f(b)-b < 0$.    [AP]\\
+                Since $g(a) > 0$ and $g(b) < 0, \exists c\in[a,b]\ni 0 = g(c) = f(c) - c$. \\\
+                $\therefore$ if $f : [a, b] \to [a, b]$ is continuous, then $f$ has a fixed point; that is, there is a $c \in [a, b]$ such that $f(c) = c$.
+            \end{proof}
+
+        \end{enumerate} 
+
+    \end{flushleft}
+
+\end{document}
